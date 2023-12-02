@@ -12,7 +12,6 @@ function createRandomPost() {
 function App() {
   const [isFakeDark, setIsFakeDark] = useState(false);
 
-  // Whenever `isFakeDark` changes, we toggle the `fake-dark-mode` class on the HTML element (see in "Elements" dev tool).
   useEffect(
     function () {
       document.documentElement.classList.toggle("fake-dark-mode");
@@ -21,7 +20,6 @@ function App() {
   );
 
   return (
-    // (2) Provide value to the child components
     <section>
       <button onClick={() => setIsFakeDark((isFakeDark) => !isFakeDark)} className="btn-fake-dark-mode">
         {isFakeDark ? "☀️" : "🌙"}
